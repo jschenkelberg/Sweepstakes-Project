@@ -1,8 +1,5 @@
-from sweepstakes import Sweepstakes
-sweepstakes = Sweepstakes()
+from marketing_firm import MarketingFirm
+marketing_firm = MarketingFirm()
 
-from contestant import Contestant
+marketing_firm.run_sweepstakes()
 
-contestant = Contestant()
-
-sweepstakes.register_contestant(contestant)

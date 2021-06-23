@@ -1,33 +1,35 @@
-def run_sweepstakes(self):
-    pass
+class UserInterface:
+    @staticmethod
+    def display_message(message):
+        print(message)
 
-@staticmethod
-def display_message(message):
-    message = "Welcome to the Sweepstakes Manager"
-    print(message)
+    @staticmethod
+    def get_user_input_string(prompt):
+        user_input = input(prompt)
+        return user_input
 
-def get_user_input_string(prompt):
-    # take in prompt
-    pass
+    @staticmethod
+    def get_user_input_number(prompt):
+        user_input = input(prompt)
+        return user_input
 
-def get_user_input_number(prompt):
-    # return number
-    pass
+    @staticmethod
+    def display_contestant_info(contestant):
+        print(contestant)
 
-def display_contestant_info(contestant):
-    # prints list
-    pass
+    @staticmethod
+    def display_sweepstakes_info(sweepstakes):
+        print(sweepstakes)
 
-def display_sweepstakes_info(sweepstakes):
-    # display info
-    pass
+    @staticmethod
+    def display_sweepstakes_selection_menu(all_sweepstakes):
+        print(all_sweepstakes)
 
-def display_sweepstakes_selection_menu(all_sweepstakes):
-    pass
+    @staticmethod
+    def display_marketing_firm_menu_options(marketing_firm_name):
+        print(marketing_firm_name)
 
-def display_marketing_firm_menu_options(marketing_firm_name):
-    pass
-
-def display_sweepstakes_menu_options(sweepstakes_name):
-    pass
+    @staticmethod
+    def display_sweepstakes_menu_options(sweepstakes_name):
+        print(sweepstakes_name)
 
