@@ -1,9 +1,10 @@
 import random
 
 import marketing_firm
+from contestant import Contestant
 
-# from user_interface import UserInterface
-# user_interface = UserInterface()
+from user_interface import UserInterface
+user_interface = UserInterface()
 
 
 
@@ -29,9 +30,9 @@ class Sweepstakes:
     def view_contestants(self):
         print(self.contestants)
 
-    def menu(self):
+    def menu(self, sweepstakes_name):
         while True:
-            menu_input = input("Press 1 to register contestants\n Press 2 to pick a winner \n Press 3 to exit menu")
+            menu_input = user_interface.get_user_input_number(f"##{sweepstakes_name}##\nPress 1 to register contestants\n Press 2 to pick a winner \n Press 3 to exit menu")
             if menu_input == "1":
                 new_contestant = Contestant()
                 self.register_contestant(new_contestant)
@@ -39,7 +40,7 @@ class Sweepstakes:
                 self.pick_winner()
             elif menu_input == "3":
                 marketing_firm.menu()
-            else:
-                print(
-                    "Not a valid input.\nPress 1 to register contestants\n Press 2 to pick a winner \n Press 3 to exit menu")
-        pass
+                break
+        else:
+            UserInterface.display_message("Not a valid input.\nPress 1 to register contestants\n Press 2 to pick a winner \n Press 3 to exit menu")
+
