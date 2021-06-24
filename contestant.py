@@ -1,5 +1,5 @@
 from user_interface import UserInterface
-
+user_interface = UserInterface()
 
 class Contestant:
     def __init__(self):
@@ -9,7 +9,7 @@ class Contestant:
         self.registration_number = 0
 
     def __repr__(self):
-        return f'{self.registration_number} - {self.first_name} {self.last_name} "Email:" {self.email}'
+        return f'Registration Number: {self.registration_number} Name: {self.first_name} {self.last_name} Email: {self.email}\n'
 
     def notify_contestant(self, is_winner):
-        print(f"{is_winner} has won the sweepstakes.")
+        user_interface.display_message(f"{is_winner} has won the sweepstakes.")

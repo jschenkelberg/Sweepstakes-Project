@@ -17,14 +17,16 @@ class Sweepstakes:
 
     def register_contestant(self, contestant):
         contestant.registration_number = len(self.contestants)+1
-        self.contestants.update({len(self.contestants): contestant})
+        self.contestants.update({contestant.registration_number: contestant})
         self.menu(sweepstakes_name=self)
 
     def pick_winner(self):
         winning_contestant_number = random.randint(0, (len(self.contestants) - 1))
+        # contestant.registration_number = len(self.contestants)
         for contestant in self.contestants:
-            if winning_contestant_number == contestant.registration_number:
+            if winning_contestant_number == contestant:
                 user_interface.display_message(f"Registration Number: {winning_contestant_number} is the winner.")
+                contestant.notify_contestant()
             else:
                 user_interface.display_message("There are no contestants for this sweepstakes.")
 
