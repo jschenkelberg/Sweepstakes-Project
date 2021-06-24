@@ -33,7 +33,7 @@ class MarketingFirm:
             self.menu()
         elif len(self.sweepstakes) >= 1:
             while True:
-                user_interface.display_message("Pick from sweepstakes list:")
+                user_interface.display_sweepstakes_selection_menu("Pick from sweepstakes list:")
                 i = 1
                 for sweepstakes.name in self.sweepstakes:
                     user_interface.display_message(f"{i} = {sweepstakes.name}\n")
@@ -70,7 +70,7 @@ class MarketingFirm:
                 self.change_marketing_firm_name()
                 break
             elif response == "4":
-                self.menu()
+                user_interface.display_message("Goodbye!")
                 break
             else:
                 user_interface.display_message("###Not a valid input. Try Again.###")
